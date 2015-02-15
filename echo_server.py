@@ -54,6 +54,7 @@ def server(log_buffer=sys.stderr):
                     #       for a new connection from a client
                     if data:
                         conn.sendall(data)
+                        #print >>log_buffer, 'sent "{0}"'.format(data)
                     else:
                         break    
                     #conn.sendall(data) if data else break:
